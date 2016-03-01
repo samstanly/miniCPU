@@ -79,6 +79,9 @@ tests = [
   ("RegFile $zero test",
         TestCase(os.path.join(file_locations,'regfile-zero.circ'),
                  os.path.join(file_locations,'reference_output/regfile-zero.out'))),
+  ("CPU starter test",
+        TestCase(os.path.join(file_locations,'CPU-starter_kit_test.circ'),
+                 os.path.join(file_locations,'reference_output/CPU-starter_kit_test.out'))),
 ]
 
 if __name__ == '__main__':
