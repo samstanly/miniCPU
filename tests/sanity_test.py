@@ -27,7 +27,7 @@ class TestCase():
     output = tempfile.TemporaryFile(mode='r+')
     command = ["java","-jar",logisim_location,"-tty","table", self.circfile]
     proc = subprocess.Popen(command,
-                            stdin=open('/dev/null'),
+                            stdin=open(os.devnull),
                             stdout=subprocess.PIPE)
     try:
       reference = open(self.tracefile)
