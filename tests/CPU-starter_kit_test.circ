@@ -164,7 +164,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#/home/zhehao/programs/classes/cs61c/proj3-starter/tests/cpu.circ" name="7"/>
+  <lib desc="file#cpu.circ" name="7"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
