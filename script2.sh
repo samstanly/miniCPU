@@ -22,7 +22,7 @@ do
 	INST_COUNT=`tr -cd "\n" < "$HEX" | wc -c | perl -pe 's/[^[0-9]]*//g'`;
 	INST_COUNT=`printf "%x" $INST_COUNT`;
 
-	cat "$CIRC" | perl -pe 's/\n/<NEWLINE>/g' | perl -pe "s/<a name=\"contents\">addr\/data: 24 32.*<\/a>/<a name=\"contents\">addr\/data: 24 32<NEWLINE>$INST<NEWLINE><\/a>/g" | perl -pe 's/<NEWLINE>/\n/g' | perl -pe "s/value\" val=\"0x[0-9a-f]{1,3}/value\" val=\"0x${INST_COUNT}/g"> "$CIRC.tmp" ;
+	cat "$CIRC" | perl -pe 's/\n/<NEWLINE>/g' | perl -pe "s/<a name=\"contents\">addr\/data: 24 32.*<\/a>/<a name=\"contents\">addr\/data: 24 32<NEWLINE>$INST<NEWLINE><\/a>/g" | perl -pe 's/<NEWLINE>/\n/g' > "$CIRC.tmp" ;
 	mv "$CIRC.tmp" "$CIRC";
 	rm "$HEX";
 
