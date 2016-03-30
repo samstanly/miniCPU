@@ -3,7 +3,7 @@ TEST_FILES="tests/student/*.s"
 if [ -n "$1" ]; then
  TEST_FILES="tests/student/$1.s"
 fi 
-CIRC='tests/CPU-starter_kit_test.circ'
+CIRC='tests/CPU-tester.circ'
 LOG='tests/logisim.jar'
 MARS='tests/Mars4_5.jar'
 TOTAL_CASE=0
